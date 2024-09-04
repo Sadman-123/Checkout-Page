@@ -36,7 +36,7 @@ class App extends StatelessWidget {
                         ),
                         Obx((){
                           return Text(
-                            "${shirt.sum}",
+                            "${shirt.sum}\$",
                             style: TextStyle(
                                 fontSize: 30, fontWeight: FontWeight.bold),
                           );
@@ -46,10 +46,11 @@ class App extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      var stk = SnackBar(
-                        content: Text("Congratulations!"),
-                      );
-                      ScaffoldMessenger.of(context).showSnackBar(stk);
+                      Get.snackbar("Congratulation","YOu just made it!!");
+                      // var stk = SnackBar(
+                      //   content: Text("Congratulations!"),
+                      // );
+                      // ScaffoldMessenger.of(context).showSnackBar(stk);
                     },
                     child: Container(
                       alignment: Alignment.center,
